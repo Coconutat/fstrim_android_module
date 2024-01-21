@@ -8,6 +8,6 @@ MODDIR=${0%/*}
 
 sleep 200
 
-fstrim -v /cache
-fstrim -v /data
-fstrim -v /system
+ASH_STANDALONE=1 /data/adb/ksu/bin/busybox fstrim -v /cache
+ASH_STANDALONE=1 /data/adb/ksu/bin/busybox fstrim -v /data
+ASH_STANDALONE=1 /data/adb/ksu/bin/busybox fstrim -v /system
